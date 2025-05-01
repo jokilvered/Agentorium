@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 216 33% 15%;   /* Slightly cooler, modern dark background */
+    --foreground: 0 0% 96%;      /* Soft light gray for text */
+    
+    --card: 216 33% 15%;
+    --card-foreground: 0 0% 96%;
+    
+    --popover: 216 33% 15%;
+    --popover-foreground: 0 0% 96%;
+    
+    --primary: 210 100% 60%; /* Bright, modern primary */
+    --primary-foreground: 0 0% 98%; /* Light text on primary */
+    
+    --secondary: 210 25% 85%; /* Light, soft secondary */
+    --secondary-foreground: 216 33% 15%;
+    
+    --muted: 210 15% 80%; /* More subtle muted tone */
+    --muted-foreground: 210 16% 50%;
+    
+    --accent: 180 100% 50%; /* Fresh cyan accent */
+    --accent-foreground: 216 33% 15%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 210 13% 91%; /* Light border tone */
+    --input: 210 13% 91%;
+    --ring: 210 100% 60%; /* Soft primary ring color */
+    
+    --radius: 0.5rem;
+
+    --sidebar-background: 216 33% 15%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 210 100% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 180 100% 50%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 210 13% 91%;
+    --sidebar-ring: 210 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-agentorium-darkgray text-agentorium-white antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  /* Glow effect updated */
+  .glow {
+    box-shadow: 0 0 8px rgba(0, 217, 216, 0.3);  /* Lighter cyan glow */
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 4px rgba(0, 217, 216, 0.4);
+  }
+  
+  .blue-glow {
+    box-shadow: 0 0 8px rgba(0, 153, 255, 0.3);  /* Lighter blue glow */
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg;
+  }
+  
+  .glassmorphism {
+    @apply bg-agentorium-darkgray/80 border border-white/10 shadow-lg;
+  }
+
+  .subtle-accent {
+    @apply bg-gradient-to-br from-agentorium-darkgray via-agentorium-darkgray to-agentorium-darkgray relative overflow-hidden;
+  }
+  
+  .subtle-accent::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-tr from-agentorium-blue/10 via-transparent to-agentorium-cyan/10 opacity-20 z-0;
+  }
+}
+
+
+/* Google Font: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
