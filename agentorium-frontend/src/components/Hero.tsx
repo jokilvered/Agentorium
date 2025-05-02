@@ -69,10 +69,7 @@ const Hero: React.FC = () => {
                       </div>
                     </div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <p className="text-lg text-agentorium-white font-bold">Agent Core</p>
-                        <p className="text-xs text-agentorium-silver mt-1">Web3 Enabled</p>
-                      </div>
+                      <img src="https://web-assets.domo.com/blog/wp-content/uploads/2025/01/25-1-blog-ai-agent-1.png" alt="Hero" className="rounded-lg" />
                     </div>
                   </div>
                 </div>
